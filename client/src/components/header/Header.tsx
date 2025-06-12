@@ -7,8 +7,8 @@ type CtaProps = {
 }
 const Cta = ({ to, label }: CtaProps) => {
   return (
-    <Link to={to}>
-      <span className="cursor-pointer text-xl rounded hover:bg-secondary text-raw">
+    <Link to={to} className="py-4 hover:bg-background rounded-lg">
+      <span className="cursor-pointer text-2xl text-raw">
         {label}
       </span>
     </Link>
@@ -16,9 +16,9 @@ const Cta = ({ to, label }: CtaProps) => {
 }
 
 const Header = () => {
-  const ctaClass = "cursor-pointer text-xl rounded hover:bg-secondary text-raw"
+  const ctaClass = "cursor-pointer text-2xl rounded hover:bg-background text-raw"
   return (
-    <Row className="w-full border items-center justify-between gap-8 px-8">
+    <Row className="w-full items-center justify-between gap-8 px-8 bg-scrollbar">
       <Row className="gap-4">
         <span className={`${ctaClass} justify-self-start`}>Michael Needleman</span>
       </Row>
