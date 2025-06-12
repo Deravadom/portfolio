@@ -1,12 +1,18 @@
 @import "tailwindcss";
 
+/* Based on VSCode's Dark Modern Theme */
 @theme {
-  --color-primary: #545F71;
-  --color-secondary: #9BA5B7;
-  --color-tertiary: #EEF1F4;
-  --color-qc-green: #CDF4D3;
-  --color-qc-pink: #FF00AA;
-  --color-ultralight: #F9F9F9;
+  --color-background: #2B2B2B;
+  --color-component: #DCDCAA;
+  --color-element: #4EC9B0;
+  --color-attribute: #9CDCFE;
+  --color-const: #569CD6;
+  --color-keyword: #C586C0;
+  --color-variable: #4FC1FF;
+  --color-string: #CE9178;
+  --color-number: #B5CEA8;
+  --color-comment: #6A9955;
+  --color-scrollbar: #3C3C3C;
 }
 
 :root {
@@ -15,8 +21,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* color: rgba(255, 255, 255, 0.87); */
+  background-color: var(--color-background);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -37,7 +43,6 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -70,7 +75,7 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #98bddd;
     background-color: #ffffff;
   }
 

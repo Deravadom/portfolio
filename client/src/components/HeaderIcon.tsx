@@ -4,7 +4,7 @@ type Props = {
   label: string
   icon: JSX.Element
   col?: boolean
-  onClick: () => void
+  onClick?: () => void
   containerClass?: string
 }
 const HeaderIcon = ({ label, icon, col = false, onClick, containerClass }: Props) => {
