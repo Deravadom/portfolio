@@ -9,9 +9,9 @@ type ItemProps = {
 }
 
 const Item = ({ label, href, value }: ItemProps) => (
-  <Link to={href} className="hover:bg-background rounded-lg p-2 w-full">
+  <Link to={href} className="hover:bg-background rounded-lg p-4 w-full">
     <Row className="w-full justify-between gap-4">
-      <p className="mb-2 text-component">{label}:</p>
+      <p className="mb-4 text-component">{label}:</p>
       <span className="text-variable hover:underline">{value}</span>
     </Row>
   </Link>
@@ -20,9 +20,9 @@ const Item = ({ label, href, value }: ItemProps) => (
 const Contact = () => {
   return (
     <Col className="items-center justify-center w-full h-full p-4">
-      <h1 className="text-3xl font-bold mb-4 text-component">Contact Me</h1>
-      <p className="mb-2 text-element">Feel free to reach out via email or connect with me on social media!</p>
-      <Col className="max-w-1/4 p-4 bg-scrollbar rounded-lg shadow-md">
+      <h1 className="text-4xl font-bold mb-6 text-component">Contact Me</h1>
+      <p className="mb-4 text-element">Feel free to reach out via email or connect with me on social media!</p>
+      <Col className="min-w-1/3 p-6 bg-scrollbar rounded-lg shadow-md text-xl">
         <Item
           label="Email"
           href="mailto:michael.needleman01@gmail.com"
