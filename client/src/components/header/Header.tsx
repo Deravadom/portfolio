@@ -1,5 +1,19 @@
-import { Link } from "react-router"
+import { Link, To } from "react-router"
 import Row from "../flex/Row"
+
+type CtaProps = {
+  to: To
+  label: string
+}
+const Cta = ({ to, label }: CtaProps) => {
+  return (
+    <Link to={to}>
+      <span className="cursor-pointer text-xl rounded hover:bg-secondary text-raw">
+        {label}
+      </span>
+    </Link>
+  )
+}
 
 const Header = () => {
   const ctaClass = "cursor-pointer text-xl rounded hover:bg-secondary text-raw"
@@ -9,21 +23,11 @@ const Header = () => {
         <span className={`${ctaClass} justify-self-start`}>Michael Needleman</span>
       </Row>
       <Row className="gap-12">
-        <Link to="/home">
-          <span className={ctaClass}>Home</span>
-        </Link>
-        <Link to='/about'>
-          <span className={ctaClass}>About Me</span>
-        </Link>
-        <Link to='/blog'>
-          <span className={ctaClass}>Blog</span>
-        </Link>
-        <Link to='/projects'>
-          <span className={ctaClass}>Projects</span>
-        </Link>
-        <Link to='/contact'>
-          <span className={ctaClass}>Contact</span>
-        </Link>
+        <Cta to="/home" label="Home" />
+        <Cta to='/about' label="About Me" />
+        <Cta to='/blog' label="Blog" />
+        <Cta to='/projects' label="Projects" />
+        <Cta to='/contact' label="Contact" />
       </Row>
     </Row>
   )
