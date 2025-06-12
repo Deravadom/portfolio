@@ -2,9 +2,9 @@ import { Link } from "react-router"
 import Row from "../flex/Row"
 
 const Header = () => {
-  const ctaClass = "cursor-pointer text-xl rounded hover:bg-secondary text-ultralight"
+  const ctaClass = "cursor-pointer text-xl rounded hover:bg-secondary text-raw"
   return (
-    <Row className="w-full border items-center justify-between gap-8 drop-shadow-lg drop-shadow-cyan-500 px-8">
+    <Row className="w-full border items-center justify-between gap-8 px-8">
       <Row className="gap-4">
         <span className={`${ctaClass} justify-self-start`}>Michael Needleman</span>
       </Row>
