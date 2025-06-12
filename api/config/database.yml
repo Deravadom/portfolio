@@ -1,0 +1,36 @@
+# SQLite. Versions 3.8.0 and up are supported.
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem "sqlite3"
+#
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS", 5) %>
+  timeout: 5000
+
+development:
+  <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
+  host: localhost
+  database: portfolio_api_development
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: portfolio_api_test
+
+
+# Store production database in the storage/ directory, which by default
+# is mounted as a persistent Docker volume in config/deploy.yml.
+production:
+  <<: *default
+  database: <%= ENV["DB_NAME"] || "unset" %>
+  username: <%= ENV["DB_USERNAME"] || "unset" %>
+  password: <%= ENV["DB_PASSWORD"] || "unset" %>
+  host: <%= ENV["DB_HOST"] || "unset" %>
+  port: <%= ENV["DB_PORT"] || 5432 %>
+  sslmode: <%= ENV["DB_SSLMODE"] || "disable" %>
