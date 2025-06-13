@@ -1,5 +1,12 @@
-export const PRIMARY = "#545F71"
-export const SECONDARY = "#9BA5B7"
-export const TERTIARY = "#EEF1F4";
-export const QC_GREEN = "#CDF4D3";
-export const QC_PINK = "#FF00AA";
+export const COLOR_BACKGROUND = "#2B2B2B";
+export const COLOR_COMPONENT = "#DCDCAA";
+export const COLOR_ELEMENT = "#4EC9B0";
+export const COLOR_ATTRIBUTE = "#9CDCFE";
+export const COLOR_CONST = "#569CD6";
+export const COLOR_KEYWORD = "#C586C0";
+export const COLOR_VARIABLE = "#4FC1FF";
+export const COLOR_STRING = "#CE9178";
+export const COLOR_NUMBER = "#B5CEA8";
+export const COLOR_COMMENT = "#6A9955";
+export const COLOR_SCROLLBAR = "#3C3C3C";
+export const COLOR_COLOR_RAW = "#D4D4D4";
