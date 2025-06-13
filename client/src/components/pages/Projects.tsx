@@ -4,7 +4,6 @@ import Col from "../flex/Col";
 import { Link } from "react-router";
 
 type ProjectItem = {
-  id: string;
   name: string;
   description: string;
   link?: string;
@@ -13,44 +12,35 @@ type ProjectItem = {
 const Projects = () => {
   const [items, setItems] = useState<ProjectItem[]>([
     {
-      id: "1",
       name: "Events Discovery",
       description: "Highlight of some contract work I did for an events discovery platform.",
-      link: undefined
     },
     {
-      id: "2",
+      name: "Deadlines Report",
+      description: "Highlight of some contract work I did for a law firm. It's a csv normalizer that parses, sorts, and replaces some domain-specific terms."
+    },
+    {
       name: "Housemate",
       description: "Personal project designed to help you be a better roommate. It features a shared, recurring ToDo list, a leftovers tracker, and a distaster preparedness checklist.",
-      className: "col-span-2",
-      link: undefined
     },
     {
-      id: "1",
       name: "Lawmatics",
       description: "Highlight of some of the work I did for Lawmatics, a legal CRM.",
-      link: undefined
     },
     {
-      id: "1",
       name: "Restuarant Load Balancer",
       description: "Load balancer system for a client's restaurants. It's designed to help restaurants manage their orders and deliveries more efficiently by coordinating stations' start times and order assignments.",
-      link: undefined
     },
     {
-      id: "1",
       name: "QuotaPath",
       description: "Highlight of some of the work I did for QuotaPath, a commissions tracking platform. Includes a Django Admin interface for generating realistic test/demo data.",
-      link: undefined
     },
     {
-      id: "3",
       name: "Video Penpals",
       description: "Drexel University senior capstone project designed to connect people through video messages. It allows users to send and receive video messages, fostering connections and communication.",
       link: "https://github.com/Conteo-Inc/conteo"
     },
     {
-      id: "4",
       name: "Post Quantum Cryptography",
       description: "Drexel University independent study project focused on post-quantum cryptography. It explores cryptographic algorithms that are resistant to quantum computing attacks.",
       link: "https://github.com/Deravadom/PostQuantumComputation"
@@ -68,8 +58,8 @@ const Projects = () => {
         className="grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 bg-scrollbar p-4 items-center justify-center"
         items={items}
         onReorder={handleReorder}
-        itemComponent={({ id, name, description, link }) => (
-          <div className="p-4 bg-background rounded" key={id}>
+        itemComponent={({ name, description, link }) => (
+          <div className="p-4 bg-background rounded" key={name}>
             <h2 className="text-xl font-semibold text-component">{name}</h2>
             <p className="text-sm text-variable">{description}</p>
             {link && (
