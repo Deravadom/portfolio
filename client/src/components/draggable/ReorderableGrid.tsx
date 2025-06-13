@@ -1,3 +1,7 @@
+type BaseGridItem = {
+  className?: string;
+}
+
 type Props<T> = {
   items: T[];
   onReorder: (newOrder: T[]) => void;
@@ -5,7 +9,7 @@ type Props<T> = {
   className?: string;
   itemContainerClassName?: string;
 }
-const ReorderableGrid = <T extends object>({
+const ReorderableGrid = <T extends BaseGridItem>({
   items,
   onReorder,
   itemComponent,
@@ -35,7 +39,7 @@ const ReorderableGrid = <T extends object>({
         return (
           <div
             key={index}
-            className={itemContainerClassName}
+            className={`${itemContainerClassName} ${item?.className || ""}`}
             onDrop={(e) => handleDrop(e, index)}
             onDragStart={(e) => handleDragStart(e, index)}
             onDragOver={handleDragOver}
