@@ -11,7 +11,7 @@ import Contact from './components/pages/Contact'
 const App = () => {
   return (
     <div
-      className='absolute top-0 left-0 w-full flex flex-col items-start min-h-screen pb-6 text-raw border-raw border-none'
+      className='absolute top-0 left-0 w-full flex flex-col items-start min-h-screen pb-6 text-raw border-raw border-none bg-background'
     >
       <Header />
       <Routes>
