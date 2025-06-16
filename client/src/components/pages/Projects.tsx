@@ -15,10 +15,10 @@ const Projects = () => {
       name: "Events Discovery",
       description: "Highlight of some contract work I did for an events discovery platform.",
     },
-    {
-      name: "Deadlines Report",
-      description: "Highlight of some contract work I did for a law firm. It's a csv normalizer that parses, sorts, and replaces some domain-specific terms."
-    },
+    // {
+    //   name: "Deadlines Report",
+    //   description: "Highlight of some contract work I did for a law firm. It's a csv normalizer that parses, sorts, and replaces some domain-specific terms."
+    // },
     {
       name: "Housemate",
       description: "Personal project designed to help you be a better roommate. It features a shared, recurring ToDo list, a leftovers tracker, and a distaster preparedness checklist.",
